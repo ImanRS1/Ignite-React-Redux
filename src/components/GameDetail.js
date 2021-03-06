@@ -11,7 +11,6 @@ const GameDetail = () => {
   const exitDetailHandler = (e) => {
     const element = e.target;
     if (element.classList.contains("shadow")) {
-      document.body.style.overflow = "auto";
       history.push("/");
     }
   };
