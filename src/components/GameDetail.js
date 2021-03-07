@@ -7,6 +7,15 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { smallImage } from "../util";
 
+import playstation from '../img/playstation.svg';
+import steam from '../img/steam.svg';
+import xbox from '../img/xbox.svg';
+import nintendo from '../img/nintendo.svg';
+import apple from '../img/apple.svg';
+import gamepad from '../img/gamepad.svg';
+import starEmpty from "../img/star-empty.png";
+import starFull from "../img/star-full.png";
+
 const GameDetail = ({pathId}) => {
   const history = useHistory();
   const exitDetailHandler = (e) => {
@@ -15,6 +24,43 @@ const GameDetail = ({pathId}) => {
       history.push("/");
     }
   };
+
+  const getStars = () =>{
+    const stars = [];
+    const rating = Math.floor(game.rating);
+    for(let i = 1; i<=5; i++){
+      if(i <= rating){
+        stars.push(<img alt="star" key={i} src={starFull}></img>);
+      } else{
+        stars.push(<img alt="star" key={i} src={starEmpty}></img>)
+      }
+    }
+    return stars;
+  }
+
+  const getPlatform = (platform) =>{
+    switch(platform){
+      case "PlayStation 4":
+        return playstation;
+      case "PlayStation 5":
+        return playstation;
+      case "Xbox Series S/X":
+        return xbox;
+      case "Xbox S":
+        return xbox;
+      case "Xbox One":
+        return xbox;
+      case "PC":
+        return steam;
+      case "Nintendo Switch":
+        return nintendo;
+      case "iOS":
+        return apple;
+      default:
+        return gamepad;
+    }
+  }
+
   const { screen, game, isLoading } = useSelector((state) => state.detail);
   return (
     <>
@@ -25,12 +71,13 @@ const GameDetail = ({pathId}) => {
               <div className="rating">
                 <motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
                 <p>Rating: {game.rating}</p>
+                {getStars()}
               </div>
               <Info>
                 <h3>Platforms</h3>
                 <Platforms>
                   {game.platforms.map((data) => (
-                    <h3 key={data.platform.id}>{data.platform.name}</h3>
+                    <img key={data.platform.id} src={getPlatform(data.platform.name)} alt={data.platform.name}></img>
                   ))}
                 </Platforms>
               </Info>
@@ -99,6 +146,11 @@ const Stats = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  img{
+    width: 2rem;
+    height: 2rem;
+    display: inline;
+  }
 `;
 
 const Info = styled(motion.div)`
