@@ -5,8 +5,7 @@ import logo from "../img/logo.svg";
 
 import { fetchSearch } from "../actions/gamesAction";
 import { useDispatch } from "react-redux";
-import {fadeIn} from "../animations";
-
+import { fadeIn } from "../animations";
 
 const Nav = () => {
   const dispatch = useDispatch();
@@ -29,8 +28,14 @@ const Nav = () => {
   return (
     <StyledNav variants={fadeIn} initial="hidden" animate="show">
       <Logo onClick={clearSearched}>
-        <img src={logo} alt="logo" />
-        <h1>Ignite</h1>
+        <div className="image-container">
+          <img src={logo} alt="logo" />
+        </div>
+        <div className="backImage-container">
+          <img src={logo} alt="logo" />
+        </div>
+        <h2>Ignite</h2>
+        <h1>GAMERS SEARCH ENGINE</h1>
       </Logo>
       <form className="search">
         <input value={textInput} onChange={inputHandler} type="text" />
@@ -43,10 +48,15 @@ const Nav = () => {
 };
 
 const StyledNav = styled(motion.nav)`
-  padding: 3rem 5rem;
-  text-align: center;
+  padding: 2rem 5rem 5rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(rgba(224, 59, 59, 0.2), #333);
+  background-color: rgba(224, 59, 59, 0.2);
+
   input {
-    width: 30%;
+    width: 30rem;
     font-size: 1.5rem;
     padding: 0.5rem;
     border: none;
@@ -57,20 +67,47 @@ const StyledNav = styled(motion.nav)`
   button {
     font-size: 1.5rem;
     border: none;
-    padding: 0.5rem 2rem;
+    padding: 0.55rem 2rem;
     cursor: pointer;
-    background: #f81d00;
+    background: #c41c16;
     color: white;
   }
 `;
 const Logo = styled(motion.div)`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   padding: 1rem;
+  color: #c41c16;
   cursor: pointer;
+  position: relative;
   img {
     height: 2rem;
     width: 2rem;
+    background-color: #c41c16;
+    border-radius: 1rem;
+  }
+  h2 {
+    font-size: 10rem;
+  }
+  h1 {
+    color: #b6504d;
+  }
+  .image-container {
+    position: absolute;
+    left: 16.5rem;
+    top: 4.2rem;
+  }
+
+  .backImage-container {
+    position: absolute;
+    z-index: -1;
+    left: 5rem;
+    top: 0;
+    img {
+      height: 20rem;
+      width: 20rem;
+      background-color: transparent;
+    }
   }
 `;
 

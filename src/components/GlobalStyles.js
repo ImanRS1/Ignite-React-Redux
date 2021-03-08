@@ -20,12 +20,14 @@ const GlobalStyles = createGlobalStyle`
     body{
         font-family: "Monserrat", sans-serif;
         width: 100%;
+        background-color: #333;
     }
     h2{
         font-size: 3rem;
         font-family: "Abril Fatface", cursive;
         font-weight: lighter;
-        color: #333;
+        color: #c41c16;
+
     }
     h3{
         font-size: 1.3rem;
