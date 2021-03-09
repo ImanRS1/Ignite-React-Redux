@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     *{
@@ -51,6 +51,11 @@ const GlobalStyles = createGlobalStyle`
         font-family: "Montserrat", sans-serif;
     }
 
-`
+    @font-face {
+            font-family: "neon";
+            src: url("./NeonTubes2.otf");
+        }
+
+`;
 
 export default GlobalStyles;

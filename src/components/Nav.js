@@ -37,12 +37,15 @@ const Nav = () => {
         <h2>Ignite</h2>
         <h1>GAMERS SEARCH ENGINE</h1>
       </Logo>
-      <form className="search">
-        <input value={textInput} onChange={inputHandler} type="text" />
-        <button onClick={submitSearch} type="submit">
-          Search
-        </button>
-      </form>
+      <div className="search-container">
+        <form className="search">
+          <input value={textInput} onChange={inputHandler} type="text" />
+          <button onClick={submitSearch} type="submit">
+            Search
+          </button>
+          <h5>POWERED BY RAWG.IO</h5>
+        </form>
+      </div>
     </StyledNav>
   );
 };
@@ -71,6 +74,22 @@ const StyledNav = styled(motion.nav)`
     cursor: pointer;
     background: #c41c16;
     color: white;
+  }
+
+  .search-container {
+    h5 {
+      font-size: 1.5rem;
+      padding: 1rem 0rem;
+      color: white;
+      text-shadow: 0.1vw 0vw 0.25vw #ffd8d8, 0.2vw 0vw 0.25vw #ffd8d8,
+        0.4vw 0vw 0.25vw #ffd8d8, 0.1vw 0vw 0vw #f25757, 0.2vw 0vw 0vw #f25757,
+        0.4vw 0vw 0vw #f25757, 0.1vw 0vw 0.1vw #f25757, 0.2vw 0vw 0.1vw #f25757,
+        0.4vw 0vw 0.1vw #f25757, 0.1vw 0vw 2vw #f25757, 0.2vw 0vw 2vw #f25757,
+        0.4vw 0vw 2vw #f25757, 0.1vw 0vw 1vw #e50b0b, 0.2vw 0vw 1vw #e50b0b,
+        0.4vw 0vw 1vw #e50b0b, 0.1vw 0vw 1vw #e50b0b, 0.2vw 0vw 1vw #e50b0b,
+        0.4vw 0vw 5vw #e50b0b, 0.1vw 0vw 1vw #e50b0b, 0.2vw 0vw 10vw #e50b0b,
+        0.4vw 0vw 5vw #e50b0b;
+    }
   }
 `;
 const Logo = styled(motion.div)`
