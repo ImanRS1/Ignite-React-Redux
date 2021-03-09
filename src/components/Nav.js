@@ -39,7 +39,12 @@ const Nav = () => {
       </Logo>
       <div className="search-container">
         <form className="search">
-          <input value={textInput} onChange={inputHandler} type="text" />
+          <input
+            value={textInput}
+            onChange={inputHandler}
+            type="text"
+            placeholder="Type a game title..."
+          />
           <button onClick={submitSearch} type="submit">
             Search
           </button>
@@ -74,9 +79,17 @@ const StyledNav = styled(motion.nav)`
     cursor: pointer;
     background: #c41c16;
     color: white;
+    &:hover {
+      background-color: #d83232;
+      color: white;
+    }
+    &:focus {
+      outline: none;
+    }
   }
 
   .search-container {
+    padding-top: 1.1rem;
     h5 {
       font-size: 1.5rem;
       padding: 1rem 0rem;
