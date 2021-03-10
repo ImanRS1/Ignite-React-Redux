@@ -77,7 +77,10 @@ const GameDetail = ({pathId}) => {
                 <h3>Platforms</h3>
                 <Platforms>
                   {game.platforms.map((data) => (
-                    <img key={data.platform.id} src={getPlatform(data.platform.name)} alt={data.platform.name}></img>
+                    <img key={data.platform.id} 
+                    src={getPlatform(data.platform.name)} 
+                    alt={data.platform.name}
+                    title={data.platform.name}></img>
                   ))}
                 </Platforms>
               </Info>
