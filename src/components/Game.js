@@ -61,7 +61,6 @@ const Game = ({ name, released, image, id, metacriticScore }) => {
 const StyledGame = styled(motion.div)`
   height: 40vh;
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
-  /*  text-align: center; */
   color: #fefefe;
   border-radius: 1rem;
   cursor: pointer;
