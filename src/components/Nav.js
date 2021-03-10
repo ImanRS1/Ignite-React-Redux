@@ -71,6 +71,11 @@ const StyledNav = styled(motion.nav)`
     margin-top: 1rem;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
     outline: none;
+
+    &::placeholder {
+      font-weight: lighter;
+      font-size: 1.2rem ;
+    }
   }
   button {
     font-size: 1.5rem;
