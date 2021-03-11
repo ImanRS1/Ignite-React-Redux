@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -10,7 +10,7 @@ import { useHistory } from "react-router-dom";
 import { smallImage } from "../util";
 import { popUp } from "../animations";
 
-const Game = ({ name, released, image, id, metacriticScore }) => {
+const Game = ({ name, released, image, id, metacriticScore, video }) => {
   const stringPathId = id.toString();
   const history = useHistory();
   if (history.location.pathname === "/") {
@@ -25,13 +25,31 @@ const Game = ({ name, released, image, id, metacriticScore }) => {
   };
 
   const checkMetaScore = (mScore) => {
-    console.log(typeof mScore);
     if (typeof mScore != "number") {
       return "N/A";
     } else {
       return mScore;
     }
   };
+
+  const [runVideo, setRunVideo] = useState(false);
+
+  /*  const runVideo = (video) => {
+    console.log(video.clip);
+
+    return (
+      <div className="video-container">
+        <video controls autoPlay loop>
+          <source src={video.clip} />
+        </video>
+      </div>
+    );
+    {game.clip && (
+      <video controls autoPlay loop>
+        <source src={game.clip.clips.full} />
+      </video>
+    )}
+  }; */
 
   return (
     <StyledGame
@@ -40,6 +58,9 @@ const Game = ({ name, released, image, id, metacriticScore }) => {
       animate="show"
       LayoutId={stringPathId}
       onClick={loadDetailHandler}
+      /* onHoverStart={() => runVideo(video)} */
+      onMouseEnter={() => setRunVideo(true)}
+      onMouseLeave={() => setRunVideo(false)}
     >
       <Link to={`/game/${id}`}>
         <StyledGameInfo>
@@ -47,6 +68,14 @@ const Game = ({ name, released, image, id, metacriticScore }) => {
           <p>{released}</p>
         </StyledGameInfo>
         <StyledScore>{checkMetaScore(metacriticScore)}</StyledScore>
+
+        {runVideo && (
+          <div className="video-container">
+            <video controls muted autoPlay loop>
+              <source src={video.clip} />
+            </video>
+          </div>
+        )}
 
         <motion.img
           layoutId={`image ${stringPathId}`}
@@ -70,6 +99,12 @@ const StyledGame = styled(motion.div)`
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .video-container {
+    z-index: 999;
+    width: 100%;
+    height: 100%;
   }
 `;
 

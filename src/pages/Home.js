@@ -42,6 +42,7 @@ const Home = () => {
                   image={game.background_image}
                   key={game.id}
                   metacriticScore={game.metacritic}
+                  video={game.clip}
                 />
               ))}
             </Games>
@@ -59,6 +60,7 @@ const Home = () => {
               image={game.background_image}
               key={game.id}
               metacriticScore={game.metacritic}
+              video={game.clip}
             />
           ))}
         </Games>
@@ -72,6 +74,7 @@ const Home = () => {
               image={game.background_image}
               key={game.id}
               metacriticScore={game.metacritic}
+              video={game.clip}
             />
           ))}
         </Games>
@@ -85,6 +88,7 @@ const Home = () => {
               image={game.background_image}
               key={game.id}
               metacriticScore={game.metacritic}
+              video={game.clip}
             />
           ))}
         </Games>
