@@ -71,7 +71,7 @@ const Game = ({ name, released, image, id, metacriticScore, video }) => {
 
         {video !== null && runVideo && (
           <div className="video-container">
-            <video controls muted autoPlay loop>
+            <video muted autoPlay loop>
               <source src={video.clip} />
             </video>
           </div>
@@ -103,8 +103,13 @@ const StyledGame = styled(motion.div)`
 
   .video-container {
     z-index: 999;
-    width: 100%;
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     height: 100%;
+    width: 100%;
   }
 `;
 
