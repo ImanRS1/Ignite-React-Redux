@@ -69,7 +69,7 @@ const Game = ({ name, released, image, id, metacriticScore, video }) => {
         </StyledGameInfo>
         <StyledScore>{checkMetaScore(metacriticScore)}</StyledScore>
 
-        {runVideo && (
+        {video !== null && runVideo && (
           <div className="video-container">
             <video controls muted autoPlay loop>
               <source src={video.clip} />
