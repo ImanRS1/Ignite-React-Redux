@@ -74,7 +74,11 @@ const StyledNav = styled(motion.nav)`
 
     &::placeholder {
       font-weight: lighter;
-      font-size: 1.2rem ;
+      font-size: 1.2rem;
+    }
+
+    @media screen and (max-width: 1350px) {
+      width: 20rem;
     }
   }
   button {
@@ -107,7 +111,16 @@ const StyledNav = styled(motion.nav)`
         0.4vw 0vw 1vw #e50b0b, 0.1vw 0vw 1vw #e50b0b, 0.2vw 0vw 1vw #e50b0b,
         0.4vw 0vw 5vw #e50b0b, 0.1vw 0vw 1vw #e50b0b, 0.2vw 0vw 10vw #e50b0b,
         0.4vw 0vw 5vw #e50b0b;
+
+      @media screen and (max-width: 1240px) {
+        font-size: 1rem;
+      }
     }
+  }
+
+  @media screen and (max-width: 1240px) {
+    flex-direction: column;
+    padding: 2rem 5rem 5rem 2rem;
   }
 `;
 const Logo = styled(motion.div)`
@@ -145,6 +158,14 @@ const Logo = styled(motion.div)`
       width: 20rem;
       background-color: transparent;
     }
+
+    @media screen and (max-width: 1240px) {
+      top: -25px;
+    }
+  }
+
+  @media screen and (max-width: 1240px) {
+    align-items: center;
   }
 `;
 
