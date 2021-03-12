@@ -86,9 +86,10 @@ const StyledNav = styled(motion.nav)`
   button {
     font-size: 1.5rem;
     border: none;
-    padding: 0.55rem 2rem;
+    padding: 0.59rem 2rem;
     cursor: pointer;
-    background: #c41c16;
+    /* background: #c41c16; */
+    background-color: rgba(196, 28, 22, 0.6);
     color: white;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -124,7 +125,38 @@ const StyledNav = styled(motion.nav)`
 
   @media screen and (max-width: 1240px) {
     flex-direction: column;
-    padding: 2rem 5rem 5rem 2rem;
+    padding: 2rem 5rem;
+  }
+
+  @media screen and (max-width: 628px) {
+    .search {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        margin-top: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+      }
+
+      input {
+        width: 130%;
+        border-bottom-right-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 525px) {
+    padding: 2rem 1rem;
+
+    .search {
+      input {
+        width: 100%;
+      }
+    }
   }
 `;
 const Logo = styled(motion.div)`
@@ -162,14 +194,36 @@ const Logo = styled(motion.div)`
       width: 20rem;
       background-color: transparent;
     }
-
-    @media screen and (max-width: 1240px) {
-      top: -25px;
-    }
   }
 
   @media screen and (max-width: 1240px) {
     align-items: center;
+
+    .backImage-container {
+      top: -25px;
+    }
+  }
+
+  @media screen and (max-width: 525px) {
+    h2 {
+      font-size: 7rem;
+    }
+    h1 {
+      font-size: 1rem;
+    }
+    .backImage-container {
+      left: 16%;
+      img {
+        height: 15rem;
+        width: 15rem;
+      }
+    }
+
+    .image-container {
+      position: absolute;
+      left: 11.7rem;
+      top: 2.7rem;
+    }
   }
 `;
 
