@@ -71,6 +71,8 @@ const StyledNav = styled(motion.nav)`
     margin-top: 1rem;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
     outline: none;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
 
     &::placeholder {
       font-weight: lighter;
@@ -88,6 +90,8 @@ const StyledNav = styled(motion.nav)`
     cursor: pointer;
     background: #c41c16;
     color: white;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     &:hover {
       background-color: #d83232;
       color: white;
