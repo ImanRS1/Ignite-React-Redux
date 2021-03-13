@@ -105,7 +105,7 @@ const StyledNav = styled(motion.nav)`
   .search-container {
     padding-top: 2.5rem;
     h5 {
-      font-size: 1.5rem;
+      font-size: 1rem;
       padding: 1rem 0rem;
       color: white;
       text-shadow: 0.1vw 0vw 0.25vw #ffd8d8, 0.2vw 0vw 0.25vw #ffd8d8,
@@ -155,6 +155,43 @@ const StyledNav = styled(motion.nav)`
     .search {
       input {
         width: 100%;
+      }
+      h5 {
+        font-size: 0.7rem;
+      }
+
+      button {
+    font-size: 1rem;
+    border: none;
+    padding: 0.59rem 2rem;
+    }
+  }
+
+  @media screen and (max-width: 378px) {
+    padding: 2rem 0rem;
+    .search-container {
+      padding-top: 1rem;
+    }
+    .search {
+      input {
+        font-size: 0.9rem;
+        width: 135%;
+        font-weight: normal;
+
+        &::placeholder {
+          font-weight: lighter;
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 325px) {
+    .search {
+      input {
+        font-size: 0.9rem;
+        width: 100%;
+        font-weight: normal;
       }
     }
   }
@@ -211,6 +248,7 @@ const Logo = styled(motion.div)`
     h1 {
       font-size: 1rem;
     }
+
     .backImage-container {
       left: 16%;
       img {
@@ -223,6 +261,32 @@ const Logo = styled(motion.div)`
       position: absolute;
       left: 11.7rem;
       top: 2.7rem;
+    }
+  }
+
+  @media screen and (max-width: 378px) {
+    h2 {
+      font-size: 4rem;
+    }
+    h1 {
+      font-size: 0.8rem;
+    }
+    .backImage-container {
+      left: 12%;
+      img {
+        height: 10rem;
+        width: 10rem;
+      }
+    }
+
+    .image-container {
+      position: absolute;
+      left: 6.8rem;
+      top: 1.6rem;
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     }
   }
 `;
