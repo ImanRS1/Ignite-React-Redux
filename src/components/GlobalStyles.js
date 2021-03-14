@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
             width: 0.5rem;
         }
         &::-webkit-scrollbar-thumb{
-            background-color: darkgrey;
+            background-color: #c41c16;
         }
         &::-webkit-scrollbar-track {
             background: white;

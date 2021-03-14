@@ -114,7 +114,7 @@ const Games = styled(motion.div)`
 const GameList = styled(motion.div)`
   padding: 0rem 5rem;
   h2 {
-    padding: 2rem 0rem 5rem 0rem;
+    padding: 2rem 0rem 1.5rem 0rem;
     text-align: center;
   }
 

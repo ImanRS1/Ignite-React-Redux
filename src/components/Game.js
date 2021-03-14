@@ -115,6 +115,10 @@ const StyledGameInfo = styled(motion.div)`
 
   @media screen and (max-width: 524px) {
     padding: 0.5rem 1rem;
+    h3,
+    p {
+      font-size: 1rem;
+    }
   }
 `;
 

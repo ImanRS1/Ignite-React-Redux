@@ -273,6 +273,7 @@ const Logo = styled(motion.div)`
       font-size: 0.8rem;
     }
     .backImage-container {
+      top: -9%;
       left: 12%;
       img {
         height: 10rem;

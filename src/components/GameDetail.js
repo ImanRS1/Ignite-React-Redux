@@ -200,6 +200,10 @@ const Platforms = styled(motion.div)`
       height: 1.5rem;
     }
   }
+
+  @media screen and (max-width: 400px) {
+    justify-content: flex-start;
+  }
 `;
 
 const Media = styled(motion.div)`
@@ -213,10 +217,21 @@ const Media = styled(motion.div)`
   @media screen and (max-width: 1050px) {
     margin-top: 1rem;
   }
+
+  @media screen and (max-width: 650px) {
+    margin-top: 1rem;
+    img {
+      height: 40vh;
+    }
+  }
 `;
 
 const Description = styled(motion.div)`
   margin: 5rem 0rem;
+
+  @media screen and (max-width: 650px) {
+    margin: 2rem 0rem;
+  }
 `;
 
 export default GameDetail;
