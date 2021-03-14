@@ -21,7 +21,7 @@ const GameDetail = ({ pathId }) => {
   const exitDetailHandler = (e) => {
     const element = e.target;
     if (element.classList.contains("shadow")) {
-      history.push("/Ignite-React-Redux");
+      history.push("/Ignite-React-Redux/");
     }
   };
 

@@ -13,7 +13,7 @@ import { popUp } from "../animations";
 const Game = ({ name, released, image, id, metacriticScore, video }) => {
   const stringPathId = id.toString();
   const history = useHistory();
-  if (history.location.pathname === "/") {
+  if (history.location.pathname === "/Ignite-React-Redux/") {
     document.body.style.overflow = "auto";
   } else {
     document.body.style.overflow = "hidden";
