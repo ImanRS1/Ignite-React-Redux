@@ -149,6 +149,11 @@ const Detail = styled(motion.div)`
   @media screen and (max-width: 1100px) {
     padding: 2rem 1rem;
   }
+
+  @media screen and (max-width: 524px) {
+    width: 90%;
+    left: 5%;
+  }
 `;
 
 const Stats = styled(motion.div)`
@@ -159,20 +164,41 @@ const Stats = styled(motion.div)`
     height: 2rem;
     display: inline;
   }
+
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 const Info = styled(motion.div)`
   text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 30%;
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    align-items: flex-start;
+    h3 {
+      padding-bottom: 0;
+    }
+  }
 `;
 
 const Platforms = styled(motion.div)`
-  margin-right: none;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
   img {
     margin: 0.5rem;
+  }
+
+  @media screen and (max-width: 647px) {
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 `;
 
@@ -182,6 +208,10 @@ const Media = styled(motion.div)`
     width: 100%;
     height: 60vh;
     object-fit: cover;
+  }
+
+  @media screen and (max-width: 1050px) {
+    margin-top: 1rem;
   }
 `;
 
