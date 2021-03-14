@@ -34,23 +34,6 @@ const Game = ({ name, released, image, id, metacriticScore, video }) => {
 
   const [runVideo, setRunVideo] = useState(false);
 
-  /*  const runVideo = (video) => {
-    console.log(video.clip);
-
-    return (
-      <div className="video-container">
-        <video controls autoPlay loop>
-          <source src={video.clip} />
-        </video>
-      </div>
-    );
-    {game.clip && (
-      <video controls autoPlay loop>
-        <source src={game.clip.clips.full} />
-      </video>
-    )}
-  }; */
-
   return (
     <StyledGame
       variants={popUp}
@@ -58,14 +41,15 @@ const Game = ({ name, released, image, id, metacriticScore, video }) => {
       animate="show"
       LayoutId={stringPathId}
       onClick={loadDetailHandler}
-      /* onHoverStart={() => runVideo(video)} */
       onMouseEnter={() => setRunVideo(true)}
       onMouseLeave={() => setRunVideo(false)}
     >
       <Link to={`/game/${id}`}>
         <StyledGameInfo>
-          <h3>{name}</h3>
-          <p>{released}</p>
+          <div className="info-container">
+            <h3>{name}</h3>
+            <p>{released}</p>
+          </div>
         </StyledGameInfo>
         <StyledScore>{checkMetaScore(metacriticScore)}</StyledScore>
 
@@ -125,6 +109,13 @@ const StyledGameInfo = styled(motion.div)`
   p {
     color: #fefefe;
   }
+  .info-container {
+    width: 75%;
+  }
+
+  @media screen and (max-width: 524px) {
+    padding: 0.5rem 1rem;
+  }
 `;
 
 const StyledScore = styled(motion.div)`
@@ -142,6 +133,12 @@ const StyledScore = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 524px) {
+    width: 5rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
 `;
 
 export default Game;
