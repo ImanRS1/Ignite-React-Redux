@@ -196,6 +196,7 @@ const StyledNav = styled(motion.nav)`
     }
   }
 `;
+
 const Logo = styled(motion.div)`
   display: flex;
   flex-direction: column;

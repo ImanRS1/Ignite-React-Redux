@@ -9,7 +9,7 @@ import Game from "../components/Game";
 import styled from "styled-components";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import {fadeIn} from "../animations";
+import { fadeIn } from "../animations";
 
 const Home = () => {
   const location = useLocation();
@@ -25,7 +25,7 @@ const Home = () => {
   );
 
   return (
-    <GameList variants={fadeIn} initial="hidden" animate="show"> 
+    <GameList variants={fadeIn} initial="hidden" animate="show">
       <AnimateSharedLayout type="crossfade">
         <AnimatePresence>
           {pathId && <GameDetail pathId={pathId} />}
@@ -97,20 +97,43 @@ const Home = () => {
   );
 };
 
-const GameList = styled(motion.div)`
-  padding: 0rem 5rem;
-  h2 {
-    padding: 2rem 0rem 5rem 0rem;
-    text-align: center;
-  }
-`;
-
 const Games = styled(motion.div)`
   min-height: 80vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-column-gap: 3rem;
   grid-row-gap: 5rem;
+
+  @media screen and (max-width: 441px) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-row-gap: 2rem;
+    min-height: 100vh;
+  }
+`;
+
+const GameList = styled(motion.div)`
+  padding: 0rem 5rem;
+  h2 {
+    padding: 2rem 0rem 5rem 0rem;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 628px) {
+    h2 {
+      padding: 2rem 0rem;
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    padding: 0rem 1rem;
+  }
+
+  @media screen and (max-width: 330px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 `;
 
 export default Home;
