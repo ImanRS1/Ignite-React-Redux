@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: "Monserrat", sans-serif;
         width: 100%;
         background-color: #333;
+        overflow-y: auto;
     }
     h2{
         font-size: 3rem;
