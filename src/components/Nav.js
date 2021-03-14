@@ -5,7 +5,7 @@ import logo from "../img/logo.svg";
 
 import { fetchSearch } from "../actions/gamesAction";
 import { useDispatch } from "react-redux";
-import { fadeIn } from "../animations";
+import { fadeIn, navFade } from "../animations";
 
 const Nav = () => {
   const dispatch = useDispatch();
@@ -60,8 +60,7 @@ const StyledNav = styled(motion.nav)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(rgba(224, 59, 59, 0.2), #333);
-  background-color: rgba(224, 59, 59, 0.2);
+  background: linear-gradient(rgba(224, 59, 59, 0.2), #333);
 
   input {
     width: 30rem;

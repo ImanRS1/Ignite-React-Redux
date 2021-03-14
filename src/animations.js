@@ -1,3 +1,6 @@
+import { withTheme } from "styled-components";
+import { gameScreenshotURL } from "./api";
+
 export const fadeIn = {
   hidden: {
     opacity: 0,
