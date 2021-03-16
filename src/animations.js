@@ -1,3 +1,4 @@
+import { buildQueries } from "@testing-library/dom";
 import { withTheme } from "styled-components";
 import { gameScreenshotURL } from "./api";
 
@@ -14,6 +15,22 @@ export const fadeIn = {
   exit: {
     opacity: 0,
     transition: { duration: 0.75 },
+  },
+};
+
+export const blinkingColor = {
+  hidden: { opacity: 0, color: "#000" },
+  show: {
+    color: "#fff",
+    opacity: 1,
+    transition: {
+      delay: 1,
+      type: "spring",
+      bounce: 0.5,
+      duration: 0.1,
+      repeat: 6,
+      repeatType: "reverse",
+    },
   },
 };
 

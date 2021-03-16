@@ -5,7 +5,7 @@ import logo from "../img/logo.svg";
 
 import { fetchSearch } from "../actions/gamesAction";
 import { useDispatch } from "react-redux";
-import { fadeIn, navFade } from "../animations";
+import { fadeIn, blinkingColor } from "../animations";
 
 const Nav = () => {
   const dispatch = useDispatch();
@@ -48,7 +48,9 @@ const Nav = () => {
           <button onClick={submitSearch} type="submit">
             Search
           </button>
-          <h5>POWERED BY RAWG.IO</h5>
+          <motion.h5 variants={blinkingColor} initial="hidden" animate="show">
+            POWERED BY RAWG.IO
+          </motion.h5>
         </form>
       </div>
     </StyledNav>
