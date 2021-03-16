@@ -18,6 +18,15 @@ export const fadeIn = {
   },
 };
 
+export const fadeAndSlide = {
+  hidden: { x: 300, opacity: 0 },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
 export const blinkingColor = {
   hidden: { opacity: 0, color: "#000" },
   show: {

@@ -5,7 +5,7 @@ import logo from "../img/logo.svg";
 
 import { fetchSearch } from "../actions/gamesAction";
 import { useDispatch } from "react-redux";
-import { fadeIn, blinkingColor } from "../animations";
+import { fadeIn, blinkingColor, fadeAndSlide } from "../animations";
 
 const Nav = () => {
   const dispatch = useDispatch();
@@ -37,7 +37,12 @@ const Nav = () => {
         <h2>Ignite</h2>
         <h1>GAMERS SEARCH ENGINE</h1>
       </Logo>
-      <div className="search-container">
+      <motion.div
+        className="search-container"
+        variants={fadeAndSlide}
+        initial="hidden"
+        animate="show"
+      >
         <form className="search">
           <input
             value={textInput}
@@ -52,12 +57,13 @@ const Nav = () => {
             POWERED BY RAWG.IO
           </motion.h5>
         </form>
-      </div>
+      </motion.div>
     </StyledNav>
   );
 };
 
 const StyledNav = styled(motion.nav)`
+overflow: hidden;
   padding: 2rem 5rem 5rem 5rem;
   display: flex;
   justify-content: space-between;
