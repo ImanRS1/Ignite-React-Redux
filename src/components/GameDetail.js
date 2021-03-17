@@ -38,6 +38,14 @@ const GameDetail = ({ pathId }) => {
     return stars;
   };
 
+  const checkMetaScore = (mScore) => {
+    if (typeof mScore != "number") {
+      return "N/A";
+    } else {
+      return mScore;
+    }
+  };
+
   const getPlatform = (platform) => {
     switch (platform) {
       case "PlayStation 4":
@@ -67,33 +75,37 @@ const GameDetail = ({ pathId }) => {
       {!isLoading && (
         <CardShadow className="shadow" onClick={exitDetailHandler}>
           <Detail LayoutId={pathId}>
-            <Stats>
-              <div className="rating">
-                <motion.h3>{game.name}</motion.h3>
-                <p>Rating: {game.rating} / 5.00</p>
-                {getStars()}
-              </div>
-              <Info>
-                <h3>Platforms</h3>
-                <Platforms>
-                  {game.platforms.map((data) => (
-                    <img
-                      key={data.platform.id}
-                      src={getPlatform(data.platform.name)}
-                      alt={data.platform.name}
-                      title={data.platform.name}
-                    ></img>
-                  ))}
-                </Platforms>
-              </Info>
-            </Stats>
-            <Media>
-              <motion.img
-                layoutId={`image ${pathId}`}
-                src={smallImage(game.background_image, 1280)}
-                alt={game.background_image}
-              />
-            </Media>
+            <div className="top-container">
+              <Stats>
+                <div className="rating">
+                  <motion.h3>{game.name}</motion.h3>
+                  <p>Rating: {game.rating} / 5.00</p>
+                  {getStars()}
+                </div>
+                <Info>
+                  <h3>Platforms:</h3>
+                  <Platforms>
+                    {game.platforms.map((data) => (
+                      <img
+                        key={data.platform.id}
+                        src={getPlatform(data.platform.name)}
+                        alt={data.platform.name}
+                        title={data.platform.name}
+                      ></img>
+                    ))}
+                  </Platforms>
+                  <StyledScore>{checkMetaScore(game.metacritic)}</StyledScore>
+                </Info>
+              </Stats>
+              <Media>
+                <motion.img
+                  layoutId={`image ${pathId}`}
+                  src={smallImage(game.background_image, 1280)}
+                  alt={game.background_image}
+                />
+              </Media>
+            </div>
+
             <Description>
               <p>{game.description_raw}</p>
             </Description>
@@ -134,6 +146,7 @@ const CardShadow = styled(motion.div)`
 `;
 
 const Detail = styled(motion.div)`
+  margin-top: 1rem;
   width: 80%;
   border-radius: 1rem;
   padding: 2rem 5rem;
@@ -141,9 +154,18 @@ const Detail = styled(motion.div)`
   color: black;
   position: absolute;
   left: 10%;
+  overflow: hidden;
 
   img {
     width: 100%;
+  }
+
+  .top-container {
+    height: 70vh;
+    overflow: hidden;
+    width: 80vw;
+    margin: -2rem -5rem;
+    position: relative;
   }
 
   @media screen and (max-width: 1100px) {
@@ -157,8 +179,20 @@ const Detail = styled(motion.div)`
 `;
 
 const Stats = styled(motion.div)`
+  width: 80vw;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: space-between;
+  padding: 2rem 2rem 1rem 2rem;
+  position: absolute;
+  z-index: 1;
+  h3 {
+    padding: 0.2rem 0;
+  }
+  h3,
+  p {
+    color: white;
+  }
   img {
     width: 2rem;
     height: 2rem;
@@ -174,6 +208,7 @@ const Info = styled(motion.div)`
   text-align: end;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   justify-content: space-between;
   width: 30%;
 
@@ -192,6 +227,11 @@ const Platforms = styled(motion.div)`
   flex-wrap: wrap;
   img {
     margin: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
   }
 
   @media screen and (max-width: 647px) {
@@ -206,11 +246,33 @@ const Platforms = styled(motion.div)`
   }
 `;
 
+const StyledScore = styled(motion.div)`
+  border: 3px solid gold;
+  font-size: 2rem;
+  border-radius: 1rem;
+  width: 5rem;
+  height: 4rem;
+  color: white;
+  background-color: #333;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 524px) {
+    width: 5rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+`;
+
 const Media = styled(motion.div)`
-  margin-top: 5rem;
+  position: absolute;
+  top: 0;
+  z-index: 0;
   img {
-    width: 100%;
-    height: 60vh;
+    width: 80vw;
+    height: 100vh;
     object-fit: cover;
   }
 
