@@ -82,12 +82,23 @@ const GameDetail = ({ pathId }) => {
                   {game.publishers.map((publisher) => (
                     <p className="publisher">{publisher.name}</p>
                   ))}
-                  <p>Rating: {game.rating} / 5.00</p>
-                  {getStars()}
+                  <p className="rating-container">
+                    {" "}
+                    {getStars()}
+                    <div className="rating-separate">{game.rating}/ 5.00</div>
+                  </p>
                   <div className="genres-container">
                     {game.genres.map((genre) => (
                       <p className="genres">{genre.name}</p>
                     ))}
+                  </div>
+                  <div className="info-url">
+                    <a href={game.metacritic_url} target="_blank">
+                      <p>{game.metacritic_url}</p>
+                    </a>
+                    <a href={game.website} target="_blank">
+                      <p>{game.website}</p>
+                    </a>
                   </div>
                 </div>
                 <Info>
@@ -192,7 +203,7 @@ const Stats = styled(motion.div)`
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: space-between;
-  padding: 2rem 2rem 1rem 2rem;
+  padding: 2rem 2rem 0.5rem 2rem;
   position: absolute;
   z-index: 1;
   h3 {
@@ -223,6 +234,21 @@ const Stats = styled(motion.div)`
     border: 1px solid white;
     padding: 0 0.5rem;
     margin-right: 0.2rem;
+  }
+
+  .info-url {
+    margin-top: 0.2rem;
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .rating-container {
+    display: flex;
+
+    .rating-separate {
+      margin-left: 0.5rem;
+    }
   }
 
   @media screen and (max-width: 400px) {
