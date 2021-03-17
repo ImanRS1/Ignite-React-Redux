@@ -94,6 +94,7 @@ const GameDetail = ({ pathId }) => {
                       ></img>
                     ))}
                   </Platforms>
+                  <h3 className="meta-header">Metacritic Score:</h3>
                   <StyledScore>{checkMetaScore(game.metacritic)}</StyledScore>
                 </Info>
               </Stats>
@@ -211,6 +212,10 @@ const Info = styled(motion.div)`
   align-items: flex-end;
   justify-content: space-between;
   width: 30%;
+
+  .meta-header {
+    margin-top: 1rem;
+  }
 
   @media screen and (max-width: 400px) {
     width: 100%;
