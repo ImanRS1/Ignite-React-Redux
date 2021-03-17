@@ -79,8 +79,16 @@ const GameDetail = ({ pathId }) => {
               <Stats>
                 <div className="rating">
                   <motion.h3>{game.name}</motion.h3>
+                  {game.publishers.map((publisher) => (
+                    <p className="publisher">{publisher.name}</p>
+                  ))}
                   <p>Rating: {game.rating} / 5.00</p>
                   {getStars()}
+                  <div className="genres-container">
+                    {game.genres.map((genre) => (
+                      <p className="genres">{genre.name}</p>
+                    ))}
+                  </div>
                 </div>
                 <Info>
                   <h3>Platforms:</h3>
@@ -200,6 +208,23 @@ const Stats = styled(motion.div)`
     display: inline;
   }
 
+  .publisher {
+    font-size: 1rem;
+  }
+
+  .genres-container {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .genres {
+    font-size: 1rem;
+    font-weight: lighter;
+    border: 1px solid white;
+    padding: 0 0.5rem;
+    margin-right: 0.2rem;
+  }
+
   @media screen and (max-width: 400px) {
     flex-direction: column;
   }
@@ -211,7 +236,7 @@ const Info = styled(motion.div)`
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-  width: 30%;
+  width: 40%;
 
   .meta-header {
     margin-top: 1rem;
