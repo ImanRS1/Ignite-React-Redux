@@ -2,6 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { fadeIn } from "../animations";
 
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -123,6 +124,18 @@ const GameDetail = ({ pathId }) => {
                   src={smallImage(game.background_image, 1280)}
                   alt={game.background_image}
                 />
+
+                {game.clip !== null && (
+                  <GameClip variants={fadeIn} initial="hidden" animate="show">
+                    <div className="clip">
+                      <div className="video-container">
+                        <video muted controls autoPlay loop>
+                          <source src={game.clip.clip} />
+                        </video>
+                      </div>
+                    </div>
+                  </GameClip>
+                )}
               </Media>
             </div>
 
@@ -149,7 +162,7 @@ const CardShadow = styled(motion.div)`
   width: 100%;
   min-height: 100vh;
   overflow-y: scroll;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -182,7 +195,6 @@ const Detail = styled(motion.div)`
 
   .top-container {
     height: 70vh;
-    overflow: hidden;
     width: 80vw;
     margin: -2rem -5rem;
     position: relative;
@@ -203,7 +215,7 @@ const Stats = styled(motion.div)`
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: space-between;
-  padding: 2rem 2rem 0.5rem 2rem;
+  padding: 1rem 2rem 0.5rem 2rem;
   position: absolute;
   z-index: 1;
   h3 {
@@ -220,7 +232,7 @@ const Stats = styled(motion.div)`
   }
 
   .publisher {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .genres-container {
@@ -239,7 +251,7 @@ const Stats = styled(motion.div)`
   .info-url {
     margin-top: 0.2rem;
     p {
-      font-size: 1rem;
+      font-size: 0.7rem;
     }
   }
 
@@ -328,8 +340,8 @@ const Media = styled(motion.div)`
   z-index: 0;
   img {
     width: 80vw;
-    height: 100vh;
-    object-fit: cover;
+    overflow: hidden;
+    height: 70vh;
   }
 
   @media screen and (max-width: 1050px) {
@@ -344,8 +356,35 @@ const Media = styled(motion.div)`
   }
 `;
 
+const GameClip = styled(motion.div)`
+  width: 100%;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+
+  .clip {
+    height: 42vh;
+    width: 50%;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.6);
+
+    .video-container {
+      z-index: 999;
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      height: 100%;
+      width: 100%;
+    }
+  }
+`;
+
 const Description = styled(motion.div)`
-  margin: 5rem 0rem;
+  margin: 7rem 0rem 5rem 0rem;
 
   @media screen and (max-width: 650px) {
     margin: 2rem 0rem;
