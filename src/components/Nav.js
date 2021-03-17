@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import logo from "../img/logo.svg";
+import arcade from "../img/arcade.jpg";
 
 import { fetchSearch } from "../actions/gamesAction";
 import { useDispatch } from "react-redux";
@@ -27,6 +28,9 @@ const Nav = () => {
 
   return (
     <StyledNav variants={fadeIn} initial="hidden" animate="show">
+      <div className="nav-backgroundImage">
+        <img src={arcade}></img>
+      </div>
       <Logo onClick={clearSearched}>
         <div className="image-container">
           <img src={logo} alt="logo" />
@@ -63,12 +67,36 @@ const Nav = () => {
 };
 
 const StyledNav = styled(motion.nav)`
-overflow: hidden;
+  overflow: hidden;
   padding: 2rem 5rem 5rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(rgba(224, 59, 59, 0.2), #333);
+
+  .nav-backgroundImage{
+    position: absolute;
+    z-index: -2;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    height: 60vh;
+    width: 100%;
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      
+    }
+  }
+
+  .nav-backgroundImage:after{
+  content:'';
+  position:absolute;
+  left:0; top:0;
+  width:100%; height:100%;
+  display:inline-block;
+  background: linear-gradient(rgba(224, 59, 59, 0.3), #333);
+  }
 
   input {
     width: 30rem;
