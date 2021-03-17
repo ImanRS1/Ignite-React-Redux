@@ -242,14 +242,23 @@ const Logo = styled(motion.div)`
   img {
     height: 2rem;
     width: 2rem;
-    background-color: #c41c16;
     border-radius: 1rem;
   }
   h2 {
     font-size: 10rem;
+    color: white;
+    text-shadow: 0.1vw 0vw 0.25vw #ffd8d8, 0.2vw 0vw 0.25vw #ffd8d8,
+      0.4vw 0vw 0.25vw #ffd8d8, 0.1vw 0vw 0vw #f25757, 0.2vw 0vw 0vw #f25757,
+      0.4vw 0vw 0vw #f25757, 0.1vw 0vw 0.1vw #f25757, 0.2vw 0vw 0.1vw #f25757,
+      0.4vw 0vw 0.1vw #f25757, 0.1vw 0vw 2vw #f25757, 0.2vw 0vw 2vw #f25757,
+      0.4vw 0vw 2vw #f25757, 0.1vw 0vw 1vw #e50b0b, 0.2vw 0vw 1vw #e50b0b,
+      0.4vw 0vw 1vw #e50b0b, 0.1vw 0vw 1vw #e50b0b, 0.2vw 0vw 1vw #e50b0b,
+      0.4vw 0vw 5vw #e50b0b, 0.1vw 0vw 1vw #e50b0b, 0.2vw 0vw 10vw #e50b0b,
+      0.4vw 0vw 5vw #e50b0b;
   }
   h1 {
-    color: #b6504d;
+    color: #a5a5a5;
+    /* color: #b6504d; */
   }
   .image-container {
     position: absolute;

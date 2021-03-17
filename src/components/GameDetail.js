@@ -103,7 +103,7 @@ const GameDetail = ({ pathId }) => {
                   </div>
                 </div>
                 <Info>
-                  <h3>Platforms:</h3>
+                  <h3>Platforms</h3>
                   <Platforms>
                     {game.platforms.map((data) => (
                       <img
@@ -114,7 +114,7 @@ const GameDetail = ({ pathId }) => {
                       ></img>
                     ))}
                   </Platforms>
-                  <h3 className="meta-header">Metacritic Score:</h3>
+                  <h3 className="meta-header">Metacritic Score</h3>
                   <StyledScore>{checkMetaScore(game.metacritic)}</StyledScore>
                 </Info>
               </Stats>
@@ -278,6 +278,10 @@ const Info = styled(motion.div)`
 
   .meta-header {
     margin-top: 1rem;
+  }
+
+  h3{
+    font-weight: lighter;
   }
 
   @media screen and (max-width: 400px) {
