@@ -86,7 +86,7 @@ const GameDetail = ({ pathId }) => {
                   <p className="rating-container">
                     {" "}
                     {getStars()}
-                    <div className="rating-separate">{game.rating}/ 5.00</div>
+                    <div className="rating-separate">{game.rating}/ 5</div>
                   </p>
                   <div className="genres-container">
                     {game.genres.map((genre) => (
@@ -103,7 +103,6 @@ const GameDetail = ({ pathId }) => {
                   </div>
                 </div>
                 <Info>
-                  <h3>Platforms</h3>
                   <Platforms>
                     {game.platforms.map((data) => (
                       <img
@@ -114,8 +113,10 @@ const GameDetail = ({ pathId }) => {
                       ></img>
                     ))}
                   </Platforms>
-                  <h3 className="meta-header">Metacritic Score</h3>
-                  <StyledScore>{checkMetaScore(game.metacritic)}</StyledScore>
+                  <div className="meta-container">
+                    <h3 className="meta-header">Metacritic:</h3>
+                    <StyledScore>{checkMetaScore(game.metacritic)}</StyledScore>
+                  </div>
                 </Info>
               </Stats>
               <Media>
@@ -198,9 +199,26 @@ const Detail = styled(motion.div)`
     width: 80vw;
     margin: -2rem -5rem;
     position: relative;
+
+    @media screen and (max-width: 1100px) {
+      margin: -2rem -1rem;
+    }
+
+    @media screen and (max-width: 650px) {
+      margin: -2rem -1rem;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 524px) {
+      margin: -2rem -1rem;
+    }
   }
 
   @media screen and (max-width: 1100px) {
+    padding: 2rem 1rem;
+  }
+
+  @media screen and (max-width: 900px) {
     padding: 2rem 1rem;
   }
 
@@ -246,6 +264,11 @@ const Stats = styled(motion.div)`
     border: 1px solid white;
     padding: 0 0.5rem;
     margin-right: 0.2rem;
+
+    @media screen and (max-width: 650px) {
+      font-size: 0.7rem;
+      padding: 0 0.2rem;
+    }
   }
 
   .info-url {
@@ -260,7 +283,19 @@ const Stats = styled(motion.div)`
 
     .rating-separate {
       margin-left: 0.5rem;
+
+      @media screen and (max-width: 650px) {
+        font-size: 0.8rem;
+      }
     }
+  }
+
+  @media screen and (max-width: 880px) {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+
+  @media screen and (max-width: 524px) {
+    width: 90vw;
   }
 
   @media screen and (max-width: 400px) {
@@ -274,14 +309,33 @@ const Info = styled(motion.div)`
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-  width: 40%;
+  width: 50%;
 
-  .meta-header {
-    margin-top: 1rem;
+  .meta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .meta-header {
+      margin-top: 1rem;
+      @media screen and (max-width: 1100px) {
+        font-size: 1rem;
+      }
+
+      @media screen and (max-width: 1100px) {
+        display: none;
+      }
+    }
   }
 
-  h3{
+  h3 {
     font-weight: lighter;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: auto;
+    h3 {
+      padding-bottom: 0;
+    }
   }
 
   @media screen and (max-width: 400px) {
@@ -306,11 +360,22 @@ const Platforms = styled(motion.div)`
     padding: 0.2rem;
   }
 
-  @media screen and (max-width: 647px) {
+  @media screen and (max-width: 1100px) {
     img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+  }
+
+  @media screen and (max-width: 650px) {
+    display: none;
+    /* img {
       width: 1.5rem;
       height: 1.5rem;
-    }
+    } */
   }
 
   @media screen and (max-width: 400px) {
@@ -331,10 +396,27 @@ const StyledScore = styled(motion.div)`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 524px) {
-    width: 5rem;
-    height: 4rem;
+  @media screen and (max-width: 1100px) {
     font-size: 1.5rem;
+    width: 4rem;
+    height: 3rem;
+    border: 2px solid gold;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid gold;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  @media screen and (max-width: 524px) {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
 `;
 
@@ -348,14 +430,16 @@ const Media = styled(motion.div)`
     height: 70vh;
   }
 
-  @media screen and (max-width: 1050px) {
-    margin-top: 1rem;
+  @media screen and (max-width: 880px) {
+    img {
+      height: 70vh;
+      object-fit: cover;
+    }
   }
 
-  @media screen and (max-width: 650px) {
-    margin-top: 1rem;
+  @media screen and (max-width: 524px) {
     img {
-      height: 40vh;
+      width: 90vw;
     }
   }
 `;
@@ -384,14 +468,41 @@ const GameClip = styled(motion.div)`
       height: 100%;
       width: 100%;
     }
+
+    @media screen and (max-width: 1100px) {
+      width: 70%;
+      height: 37vh;
+    }
+
+    @media screen and (max-width: 724px) {
+      width: 90%;
+      height: 37vh;
+    }
+
+    @media screen and (max-width: 440px) {
+      width: 90%;
+      height: 27vh;
+    }
   }
+
+  @media screen and (max-width: 724px) {
+    width: 96%;
+  }
+
+  @media screen and (max-width: 440px) {
+      top: 65%;
+    }
 `;
 
 const Description = styled(motion.div)`
   margin: 7rem 0rem 5rem 0rem;
 
+  @media screen and (max-width: 1100px) {
+    margin-top: 4rem;
+  }
+
   @media screen and (max-width: 650px) {
-    margin: 2rem 0rem;
+    margin: 4rem 1rem;
   }
 `;
 

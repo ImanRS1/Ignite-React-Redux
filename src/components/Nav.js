@@ -304,8 +304,12 @@ const Logo = styled(motion.div)`
 
     .image-container {
       position: absolute;
-      left: 11.7rem;
-      top: 2.7rem;
+      left: 11.88rem;
+      top: 3.2rem;
+      img {
+        height: 1.3rem;
+        width: 1.3rem;
+      }
     }
   }
 
@@ -327,11 +331,11 @@ const Logo = styled(motion.div)`
 
     .image-container {
       position: absolute;
-      left: 6.8rem;
-      top: 1.6rem;
+      left: 7.1rem;
+      top: 2.1rem;
       img {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1rem;
+        height: 1rem;
       }
     }
   }
