@@ -238,6 +238,14 @@ const Stats = styled(motion.div)`
   z-index: 1;
   h3 {
     padding: 0.2rem 0;
+
+    @media screen and (max-width: 650px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 70%;
+    }
   }
   h3,
   p {

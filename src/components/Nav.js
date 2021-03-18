@@ -258,6 +258,7 @@ const Logo = styled(motion.div)`
   }
   h1 {
     color: #a5a5a5;
+    text-shadow: 0.1vw 0vw 0.25vw #f30000, 0.2vw 0vw 0.25vw #ffd8d8;
     /* color: #b6504d; */
   }
   .image-container {
