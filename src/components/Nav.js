@@ -180,6 +180,7 @@ const StyledNav = styled(motion.nav)`
         width: 130%;
         border-bottom-right-radius: 1rem;
         border-top-right-radius: 1rem;
+        text-align: center;
       }
     }
   }
