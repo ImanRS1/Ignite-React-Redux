@@ -139,7 +139,7 @@ const StyledNav = styled(motion.nav)`
 
   .search-container {
     padding-top: 2.5rem;
-    h5 {
+    h5 {      
       font-size: 1rem;
       padding: 1rem 0rem;
       color: white;

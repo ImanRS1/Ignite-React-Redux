@@ -52,10 +52,6 @@ const GlobalStyles = createGlobalStyle`
         font-family: "Montserrat", sans-serif;
     }
 
-    @font-face {
-            font-family: "neon";
-            src: url("./NeonTubes2.otf");
-        }
 
 `;
 

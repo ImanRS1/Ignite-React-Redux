@@ -258,7 +258,9 @@ const Stats = styled(motion.div)`
   }
 
   .publisher {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
   }
 
   .genres-container {
