@@ -131,7 +131,7 @@ const GameDetail = ({ pathId }) => {
                     <div className="clip">
                       <div className="video-container">
                         <video muted controls autoPlay loop>
-                          <source src={game.clip.clip} />
+                          <source src={game.clip.clips.full} />
                         </video>
                       </div>
                     </div>

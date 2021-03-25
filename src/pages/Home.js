@@ -13,7 +13,6 @@ import { fadeIn } from "../animations";
 
 const Home = () => {
   const location = useLocation();
-  console.log(location);
   const pathId = location.pathname.split("/")[2];
 
   const dispatch = useDispatch();
