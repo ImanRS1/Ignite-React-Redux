@@ -123,7 +123,6 @@ const StyledNav = styled(motion.nav)`
     border: none;
     padding: 0.59rem 2rem;
     cursor: pointer;
-    /* background: #c41c16; */
     background-color: rgba(196, 28, 22, 0.6);
     color: white;
     border-top-right-radius: 1rem;
@@ -260,7 +259,6 @@ const Logo = styled(motion.div)`
   h1 {
     color: #a5a5a5;
     text-shadow: 0.1vw 0vw 0.25vw #f30000, 0.2vw 0vw 0.25vw #ffd8d8;
-    /* color: #b6504d; */
   }
   .image-container {
     position: absolute;
