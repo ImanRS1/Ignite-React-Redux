@@ -70,7 +70,9 @@ const GameDetail = ({ pathId }) => {
     }
   };
 
-  const { screen, game, isLoading } = useSelector((state) => state.detail);
+  const { screen, game, movie, isLoading } = useSelector((state) => state.detail);
+  console.log(movie);
+  console.log(game);
   return (
     <>
       {!isLoading && (

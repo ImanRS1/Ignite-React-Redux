@@ -41,6 +41,8 @@ export const gameDetailsURL = (game_id) => `${base_url}games/${game_id}?&key=71e
 
 export const gameScreenshotURL = (game_id) => `${base_url}games/${game_id}/screenshots?&key=71ef119d7ead41e0926b6a8bc17b76a2`;
 
+export const gameMovieURL = (game_id) => `${base_url}games/${game_id}/movies?&key=71ef119d7ead41e0926b6a8bc17b76a2`;
+
 export const searchGameURL = (game_name) => `${base_url}games?search=${game_name}&page_size=12&key=71ef119d7ead41e0926b6a8bc17b76a2`;
 
 /* &key=71ef119d7ead41e0926b6a8bc17b76a2 */
