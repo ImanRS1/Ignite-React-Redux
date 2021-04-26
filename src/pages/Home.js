@@ -24,9 +24,6 @@ const Home = () => {
     (state) => state.games
   );
 
-  console.log(popular);
-  console.log(searched);
-
   return (
     <GameList variants={fadeIn} initial="hidden" animate="show">
       <AnimateSharedLayout type="crossfade">
