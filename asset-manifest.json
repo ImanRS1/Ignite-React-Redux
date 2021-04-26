@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.js": "/Ignite-React-Redux/static/js/main.53515ff6.chunk.js",
-    "main.js.map": "/Ignite-React-Redux/static/js/main.53515ff6.chunk.js.map",
-    "runtime-main.js": "/Ignite-React-Redux/static/js/runtime-main.950f070e.js",
-    "runtime-main.js.map": "/Ignite-React-Redux/static/js/runtime-main.950f070e.js.map",
-    "static/js/2.7f67ce20.chunk.js": "/Ignite-React-Redux/static/js/2.7f67ce20.chunk.js",
-    "static/js/2.7f67ce20.chunk.js.map": "/Ignite-React-Redux/static/js/2.7f67ce20.chunk.js.map",
-    "static/js/3.6627b340.chunk.js": "/Ignite-React-Redux/static/js/3.6627b340.chunk.js",
-    "static/js/3.6627b340.chunk.js.map": "/Ignite-React-Redux/static/js/3.6627b340.chunk.js.map",
+    "main.js": "/Ignite-React-Redux/static/js/main.cfe5fbb9.chunk.js",
+    "main.js.map": "/Ignite-React-Redux/static/js/main.cfe5fbb9.chunk.js.map",
+    "runtime-main.js": "/Ignite-React-Redux/static/js/runtime-main.d7189823.js",
+    "runtime-main.js.map": "/Ignite-React-Redux/static/js/runtime-main.d7189823.js.map",
+    "static/js/2.0a8ec584.chunk.js": "/Ignite-React-Redux/static/js/2.0a8ec584.chunk.js",
+    "static/js/2.0a8ec584.chunk.js.map": "/Ignite-React-Redux/static/js/2.0a8ec584.chunk.js.map",
+    "static/js/3.9a55b14b.chunk.js": "/Ignite-React-Redux/static/js/3.9a55b14b.chunk.js",
+    "static/js/3.9a55b14b.chunk.js.map": "/Ignite-React-Redux/static/js/3.9a55b14b.chunk.js.map",
     "index.html": "/Ignite-React-Redux/index.html",
-    "static/js/2.7f67ce20.chunk.js.LICENSE.txt": "/Ignite-React-Redux/static/js/2.7f67ce20.chunk.js.LICENSE.txt",
-    "static/media/apple.aed8126a.svg": "/Ignite-React-Redux/static/media/apple.aed8126a.svg",
+    "static/js/2.0a8ec584.chunk.js.LICENSE.txt": "/Ignite-React-Redux/static/js/2.0a8ec584.chunk.js.LICENSE.txt",
+    "static/media/apple.5757c37e.svg": "/Ignite-React-Redux/static/media/apple.5757c37e.svg",
     "static/media/arcade.955f1419.jpg": "/Ignite-React-Redux/static/media/arcade.955f1419.jpg",
-    "static/media/gamepad.98eab601.svg": "/Ignite-React-Redux/static/media/gamepad.98eab601.svg",
+    "static/media/gamepad.c9269ef5.svg": "/Ignite-React-Redux/static/media/gamepad.c9269ef5.svg",
     "static/media/logo.9b6b8655.svg": "/Ignite-React-Redux/static/media/logo.9b6b8655.svg",
-    "static/media/nintendo.a909be56.svg": "/Ignite-React-Redux/static/media/nintendo.a909be56.svg",
-    "static/media/playstation.4bbb4079.svg": "/Ignite-React-Redux/static/media/playstation.4bbb4079.svg",
-    "static/media/steam.840878ac.svg": "/Ignite-React-Redux/static/media/steam.840878ac.svg",
-    "static/media/xbox.63a50e86.svg": "/Ignite-React-Redux/static/media/xbox.63a50e86.svg"
+    "static/media/nintendo.f579be04.svg": "/Ignite-React-Redux/static/media/nintendo.f579be04.svg",
+    "static/media/playstation.18cc4b9c.svg": "/Ignite-React-Redux/static/media/playstation.18cc4b9c.svg",
+    "static/media/steam.d7b8819f.svg": "/Ignite-React-Redux/static/media/steam.d7b8819f.svg",
+    "static/media/xbox.3e7db735.svg": "/Ignite-React-Redux/static/media/xbox.3e7db735.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.950f070e.js",
-    "static/js/2.7f67ce20.chunk.js",
-    "static/js/main.53515ff6.chunk.js"
+    "static/js/runtime-main.d7189823.js",
+    "static/js/2.0a8ec584.chunk.js",
+    "static/js/main.cfe5fbb9.chunk.js"
   ]
 }
