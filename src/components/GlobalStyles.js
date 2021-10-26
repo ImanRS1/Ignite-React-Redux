@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
     body{
         font-family: "Monserrat", sans-serif;
         width: 100%;
-        background-color: #333;
+        background-color: #202020;
         overflow-y: auto;
     }
     h2{

@@ -95,7 +95,7 @@ const StyledNav = styled(motion.nav)`
   left:0; top:0;
   width:100%; height:100%;
   display:inline-block;
-  background: linear-gradient(rgba(224, 59, 59, 0.3), #333);
+  background: linear-gradient(rgba(224, 59, 59, 0.3), #202020);
   }
 
   input {

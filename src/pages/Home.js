@@ -100,6 +100,7 @@ const Home = () => {
 
 const Games = styled(motion.div)`
   min-height: 80vh;
+  margin-bottom: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-column-gap: 3rem;
