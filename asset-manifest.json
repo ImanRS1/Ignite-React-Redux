@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/Ignite-React-Redux/static/js/main.b9f03039.chunk.js",
-    "main.js.map": "/Ignite-React-Redux/static/js/main.b9f03039.chunk.js.map",
+    "main.js": "/Ignite-React-Redux/static/js/main.4500174f.chunk.js",
+    "main.js.map": "/Ignite-React-Redux/static/js/main.4500174f.chunk.js.map",
     "runtime-main.js": "/Ignite-React-Redux/static/js/runtime-main.d7189823.js",
     "runtime-main.js.map": "/Ignite-React-Redux/static/js/runtime-main.d7189823.js.map",
-    "static/js/2.0a8ec584.chunk.js": "/Ignite-React-Redux/static/js/2.0a8ec584.chunk.js",
-    "static/js/2.0a8ec584.chunk.js.map": "/Ignite-React-Redux/static/js/2.0a8ec584.chunk.js.map",
+    "static/js/2.b4881b5e.chunk.js": "/Ignite-React-Redux/static/js/2.b4881b5e.chunk.js",
+    "static/js/2.b4881b5e.chunk.js.map": "/Ignite-React-Redux/static/js/2.b4881b5e.chunk.js.map",
     "static/js/3.9a55b14b.chunk.js": "/Ignite-React-Redux/static/js/3.9a55b14b.chunk.js",
     "static/js/3.9a55b14b.chunk.js.map": "/Ignite-React-Redux/static/js/3.9a55b14b.chunk.js.map",
     "index.html": "/Ignite-React-Redux/index.html",
-    "static/js/2.0a8ec584.chunk.js.LICENSE.txt": "/Ignite-React-Redux/static/js/2.0a8ec584.chunk.js.LICENSE.txt",
+    "static/js/2.b4881b5e.chunk.js.LICENSE.txt": "/Ignite-React-Redux/static/js/2.b4881b5e.chunk.js.LICENSE.txt",
     "static/media/apple.5757c37e.svg": "/Ignite-React-Redux/static/media/apple.5757c37e.svg",
     "static/media/arcade.955f1419.jpg": "/Ignite-React-Redux/static/media/arcade.955f1419.jpg",
     "static/media/gamepad.c9269ef5.svg": "/Ignite-React-Redux/static/media/gamepad.c9269ef5.svg",
@@ -21,7 +21,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d7189823.js",
-    "static/js/2.0a8ec584.chunk.js",
-    "static/js/main.b9f03039.chunk.js"
+    "static/js/2.b4881b5e.chunk.js",
+    "static/js/main.4500174f.chunk.js"
   ]
 }
