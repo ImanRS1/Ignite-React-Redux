@@ -71,8 +71,9 @@ const GameDetail = ({ pathId }) => {
   };
 
   const { screen, game, movie, isLoading } = useSelector((state) => state.detail);
-  console.log(movie);
-  console.log(game);
+  //console.log(movie.data.results[0].data.max);
+  console.log(movie)
+  //console.log(game);
   return (
     <>
       {!isLoading && (
@@ -128,12 +129,12 @@ const GameDetail = ({ pathId }) => {
                   alt={game.background_image}
                 />
 
-                {game.clip !== null && (
+                {movie.data.count !== 0 && (
                   <GameClip variants={fadeIn} initial="hidden" animate="show">
                     <div className="clip">
                       <div className="video-container">
                         <video muted controls autoPlay loop>
-                          <source src={game.clip.clips.full} />
+                          <source src={movie.data.results[0].data.max} />
                         </video>
                       </div>
                     </div>
