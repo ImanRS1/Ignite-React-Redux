@@ -70,7 +70,9 @@ const GameDetail = ({ pathId }) => {
     }
   };
 
-  const { screen, game, movie, isLoading } = useSelector((state) => state.detail);
+  const { screen, game, movie, isLoading } = useSelector(
+    (state) => state.detail
+  );
   return (
     <>
       {!isLoading && (
@@ -258,9 +260,14 @@ const Stats = styled(motion.div)`
   }
 
   .publisher {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: lighter;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
+
+    @media screen and (max-width: 950px) {
+      font-size: 0.5rem;
+    }
   }
 
   .genres-container {
@@ -285,7 +292,13 @@ const Stats = styled(motion.div)`
   .info-url {
     margin-top: 0.2rem;
     p {
-      font-size: 0.7rem;
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 950px) {
+      p {
+        font-size: 0.7rem;
+      }
     }
   }
 
@@ -501,8 +514,8 @@ const GameClip = styled(motion.div)`
   }
 
   @media screen and (max-width: 440px) {
-      top: 65%;
-    }
+    top: 65%;
+  }
 `;
 
 const Description = styled(motion.div)`
