@@ -97,10 +97,12 @@ const GameDetail = ({ pathId }) => {
                   </div>
                   <div className="info-url">
                     <a href={game.metacritic_url} target="_blank">
-                      <p>{game.metacritic_url}</p>
+                      <p>
+                        {game.metacritic_url.replace(/^(http|https):\/\//g, "")}
+                      </p>
                     </a>
                     <a href={game.website} target="_blank">
-                      <p>{game.website}</p>
+                      <p>{game.website.replace(/^(http|https):\/\//g, "")}</p>
                     </a>
                   </div>
                 </div>
