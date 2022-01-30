@@ -269,6 +269,7 @@ const Stats = styled(motion.div)`
 
     @media screen and (max-width: 950px) {
       font-size: 0.5rem;
+      margin-right: 4rem;
     }
   }
 
